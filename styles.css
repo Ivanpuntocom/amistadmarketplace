@@ -1,84 +1,211 @@
+/* Estilos generales */
 body {
     margin: 0;
-    padding: 0;
-    background-image: url('../images/BK3.png'); /* Reemplaza 'images/BK3.png' con la ruta a tu imagen de fondo */
-    background-size: cover; /* Hace que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en la pantalla */
-    background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
-    height: 100vh; /* Asegura que el body tenga la altura completa de la ventana */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #f5f5f5;
+    background-image: url('images/zen-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative; /* Posiciona elementos hijos absolutamente dentro de su contenedor */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #27ae60;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #27ae60;
+}
+
+/* Hero */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background: #27ae60;
+}
+
+.hero h2 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 28px;
+    color: lightgray;
+}
+
+/* Secciones */
+.content {
+    padding: 60px 20px;
+    background-color: white;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.center-button {
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    color: black;
-    background-color: white; /* Botón de color blanco */
-    border: 2px solid black; /* Borde negro para darle definición */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #27ae60;
+}
+
+.cultivos-grid, .productos-grid, .maceteros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cultivo-item, .producto-item, .macetero-item {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.cultivo-item:hover, .producto-item:hover, .macetero-item:hover {
+    transform: translateY(-5px);
+}
+
+.cultivo-img, .producto-img, .macetero-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}
+
+.detalles-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle un efecto de profundidad */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.center-button:hover {
-    background-color: black;
-    color: white;
+.detalles-btn:hover {
+    background-color: #2ecc71;
 }
 
-.invisible-link {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    display: block;
-}
-
-.invisible-button {
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    border: none;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    opacity: 0; /* Hace el botón invisible */
 }
 
-.invisible-button:hover {
-    opacity: 0.1; /* Muestra ligeramente el botón al pasar el mouse */
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.bottom-left-link {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
+/* Estilos para el contenido del modal */
+#modal-body img {
+    max-width: 100%; /* Asegura que la imagen se ajuste al tamaño del modal */
+    height: auto;
     display: block;
+    margin: 0 auto;
 }
 
-.bottom-left-button {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    opacity: 0; /* Hace el botón invisible */
+/* Estilos para los párrafos y listas */
+#modal-body p {
+    margin-bottom: 1em; /* Espacio debajo de los párrafos */
+     color: darkslategray; /* Cambia este color al que prefieras */
 }
 
-.bottom-left-button:hover {
-    opacity: 0.1; /* Muestra ligeramente el botón al pasar el mouse */
+#modal-body ul {
+    padding-left: 1px; /* Espacio a la izquierda de las listas */
+    color: #000; /* Cambia este color al que prefieras */
+}
+
+#modal-body li {
+    margin-bottom: 0.5em; /* Espacio debajo de cada ítem de lista */
+    color: slategray; /* Cambia este color al que prefieras */
+}
+
+/* Manejo del desbordamiento del contenido */
+#modal-body {
+    overflow-wrap: break-word; /* Rompe palabras largas para evitar el desbordamiento */
 }
