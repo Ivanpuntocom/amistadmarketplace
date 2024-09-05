@@ -3,221 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen Garden - Tu Jardín Botánico</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amistad Marketplace</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>BotaniQ</h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#cultivos">Cultivos</a></li>
-                    <li><a href="#productos-caseros">Productos Caseros</a></li>
-                    <li><a href="#maceteros">Ideas de Maceteros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>B I E N V E N I D O S</h1>
+        <div class="logo">
+            <img src="images/AmistadMarketplace%20LOGO.png" alt="Amistad Marketplace Logo">
         </div>
-    </header>
-
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h2>Bienvenido a tu jardín zen</h2>
-            <p>Explora, aprende y cultiva con serenidad.</p>
-        </div>
-    </section>
-
-    <section id="cultivos" class="content">
-        <div class="container">
-            <h2>Cultivos</h2>
-            <p>Selecciona y organiza tus cultivos según su complejidad, temporada y tipo. Desde vegetales y frutas hasta hierbas aromáticas, encuentra el cultivo perfecto para ti.</p>
-            <div class="cultivos-grid">
-                <!-- Ejemplo de cultivo con imagen y descripción -->
-                <div class="cultivo-item">
-                    <img src="images/tomates.jpg" alt="Tomates" class="cultivo-img">
-                    <h3>Tomates</h3>
-                    <p>Temporada: Verano</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: Los tomates son una excelente opción para aquellos que buscan un cultivo productivo. Requieren un clima cálido y suelos bien drenados.</p>
-                    <button class="detalles-btn" data-cultivo="tomates">Ver Detalles</button>
-                </div>
-                <div class="cultivo-item">
-                    <img src="images/fresas.jpg" alt="Fresas" class="cultivo-img">
-                    <h3>Fresas</h3>
-                    <p>Temporada: Primavera</p>
-                    <p>Complejidad: Fácil</p>
-                    <p>Descripción: Las fresas son perfectas para principiantes. Son plantas perennes que prosperan en climas templados y ofrecen frutos dulces y jugosos.</p>
-                    <button class="detalles-btn" data-cultivo="fresas">Ver Detalles</button>
-                </div>
-                <div class="cultivo-item">
-                    <img src="images/lechuga.webp" alt="Lechuga" class="cultivo-img">
-                    <h3>Lechuga</h3>
-                    <p>Temporada: Otoño</p>
-                    <p>Complejidad: Fácil</p>
-                    <p>Descripción: La lechuga es ideal para cultivar en casa. Crece rápido y puede plantarse en pequeñas macetas o directamente en la tierra.</p>
-                    <button class="detalles-btn" data-cultivo="lechuga">Ver Detalles</button>
-                </div>
-                <div class="cultivo-item">
-                    <img src="images/pepino.webp" alt="Pepino" class="cultivo-img">
-                    <h3>Pepino</h3>
-                    <p>Temporada: Verano</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: Los pepinos crecen mejor en clima cálido y requieren un soporte adecuado. Se pueden cultivar en macetas grandes o directamente en el suelo.</p>
-                    <button class="detalles-btn" data-cultivo="pepino">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/jalapeno.jpg" alt="Jalapeño" class="cultivo-img">
-                    <h3>Jalapeño</h3>
-                    <p>Temporada: Verano</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: Los jalapeños necesitan calor y mucho sol. Son ideales para macetas grandes o jardineras, así como para cultivos en el suelo.</p>
-                    <button class="detalles-btn" data-cultivo="jalapeno">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/calabacita.jpg" alt="Calabacita" class="cultivo-img">
-                    <h3>Calabacita</h3>
-                    <p>Temporada: Verano</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: Las calabacitas crecen bien en climas cálidos y requieren mucho espacio para expandirse. Se pueden cultivar en macetas grandes o en el suelo.</p>
-                    <button class="detalles-btn" data-cultivo="calabacita">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/espinaca.jpg" alt="Espinaca" class="cultivo-img">
-                    <h3>Espinaca</h3>
-                    <p>Temporada: Otoño/Primavera</p>
-                    <p>Complejidad: Fácil</p>
-                    <p>Descripción: La espinaca es fácil de cultivar y puede crecer en macetas pequeñas o en el suelo. Prefiere climas frescos y sombra parcial.</p>
-                    <button class="detalles-btn" data-cultivo="espinaca">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/brocoli.jpg" alt="Brócoli" class="cultivo-img">
-                    <h3>Brócoli</h3>
-                    <p>Temporada: Otoño/Primavera</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: El brócoli crece mejor en climas frescos. Se puede cultivar en macetas grandes o en el suelo, y requiere buena ventilación y espacio.</p>
-                    <button class="detalles-btn" data-cultivo="brocoli">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/repollo.jpg" alt="Repollo" class="cultivo-img">
-                    <h3>Repollo</h3>
-                    <p>Temporada: Otoño/Primavera</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: El repollo se desarrolla bien en climas frescos. Puede cultivarse en macetas grandes o en el suelo, y necesita suficiente espacio para crecer.</p>
-                    <button class="detalles-btn" data-cultivo="repollo">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/coliflor.jpg" alt="Coliflor" class="cultivo-img">
-                    <h3>Coliflor</h3>
-                    <p>Temporada: Otoño/Primavera</p>
-                    <p>Complejidad: Moderada</p>
-                    <p>Descripción: La coliflor necesita un clima fresco y se puede cultivar en macetas grandes o en el suelo. Requiere espacio y buena ventilación.</p>
-                    <button class="detalles-btn" data-cultivo="coliflor">Ver Detalles</button>
-                </div>
-
-                <div class="cultivo-item">
-                    <img src="images/rabanos.jpg" alt="Rábanos" class="cultivo-img">
-                    <h3>Rábanos</h3>
-                    <p>Temporada: Otoño/Primavera</p>
-                    <p>Complejidad: Fácil</p>
-                    <p>Descripción: Los rábanos crecen rápidamente y pueden cultivarse en macetas pequeñas o directamente en el suelo. Son ideales para cultivos rápidos.</p>
-                    <button class="detalles-btn" data-cultivo="rabanos">Ver Detalles</button>
-                </div>
-                <!-- Añadir más cultivos aquí -->
-            </div>
-        </div>
-    </section>
-
-    <section id="productos-caseros" class="content">
-        <div class="container">
-            <h2>Productos Caseros</h2>
-            <p>Aprende a crear tus propios productos caseros para el jardín. Desde fertilizantes hasta insecticidas naturales, encuentra recetas que ayudarán a mantener tu jardín saludable.</p>
-            <div class="productos-grid">
-                <!-- Ejemplo de producto casero con imagen y descripción -->
-                <div class="producto-item">
-                    <img src="images/fertilizante.jpg" alt="Fertilizante Orgánico" class="producto-img">
-                    <h3>Fertilizante Orgánico</h3>
-                    <p>Tipo: Compostaje</p>
-                    <p>Descripción: Crea tu propio fertilizante orgánico utilizando restos de cocina y jardín. Es ideal para enriquecer el suelo y promover un crecimiento saludable de las plantas.</p>
-                    <button class="detalles-btn" data-producto="fertilizante">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/insecticida.jpg" alt="Insecticida Natural" class="producto-img">
-                    <h3>Insecticida Natural</h3>
-                    <p>Tipo: Neem</p>
-                    <p>Descripción: El aceite de neem es un insecticida natural y eficaz que ayuda a controlar plagas sin dañar tus plantas. Aprende a prepararlo y aplicarlo.</p>
-                    <button class="detalles-btn" data-producto="insecticida">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/fungicida.jpg" alt="Fungicida Natural" class="producto-img">
-                    <h3>Fungicida Natural</h3>
-                    <p>Tipo: Bicarbonato</p>
-                    <p>Descripción: El bicarbonato de sodio es un excelente fungicida para tratar hongos en las plantas. Aprende a usarlo de manera segura y efectiva.</p>
-                    <button class="detalles-btn" data-producto="fungicida">Ver Receta</button>
-                </div>
-                <!-- 10 productos adicionales -->
-                <div class="producto-item">
-                    <img src="images/compost.jpg" alt="Compost Casero" class="producto-img">
-                    <h3>Compost Casero</h3>
-                    <p>Tipo: Abono Orgánico</p>
-                    <p>Descripción: Aprende a crear compost a partir de restos orgánicos para enriquecer el suelo y mejorar la calidad de tus cultivos.</p>
-                    <button class="detalles-btn" data-producto="compost">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/te-de-lombriz.jpg" alt="Té de Lombriz" class="producto-img">
-                    <h3>Té de Lombriz</h3>
-                    <p>Tipo: Fertilizante Líquido</p>
-                    <p>Descripción: El té de lombriz es un fertilizante líquido lleno de nutrientes que ayuda a fortalecer las plantas y mejorar la productividad.</p>
-                    <button class="detalles-btn" data-producto="te-lombriz">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/macerado-ajo.jpg" alt="Macerado de Ajo" class="producto-img">
-                    <h3>Macerado de Ajo</h3>
-                    <p>Tipo: Insecticida</p>
-                    <p>Descripción: Un insecticida natural a base de ajo, eficaz para repeler insectos y plagas comunes en el jardín.</p>
-                    <button class="detalles-btn" data-producto="macerado-ajo">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/aceite-oliva.jpg" alt="Aceite de Oliva y Jabón" class="producto-img">
-                    <h3>Aceite de Oliva y Jabón</h3>
-                    <p>Tipo: Limpiador de Hojas</p>
-                    <p>Descripción: Una mezcla de aceite de oliva y jabón suave que ayuda a limpiar las hojas de polvo y prevenir plagas.</p>
-                    <button class="detalles-btn" data-producto="aceite-oliva">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/abono-potasio.jpg" alt="Abono de Potasio" class="producto-img">
-                    <h3>Abono de Potasio</h3>
-                    <p>Tipo: Fertilizante</p>
-                    <p>Descripción: Un abono rico en potasio, ideal para fortalecer las plantas y mejorar la calidad de los frutos.</p>
-                    <button class="detalles-btn" data-producto="abono-potasio">Ver Receta</button>
-                </div>
-                <div class="producto-item">
-                    <img src="images/purina-ortiga.jpg" alt="Purina de Ortiga" class="producto-img">
-                    <h3>Purina de Ortiga</h3>
-                    <p>Tipo: Fertilizante y Repelente</p>
-                    <p>Descripción: La purina de ortiga es un fertilizante natural que también actúa como repelente contra plagas.</p>
-                    <button class="detalles-btn" data-producto="purina-ortiga">Ver Receta</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div id="modal-body">
-            <!-- Contenido del modal cargado por JavaScript -->
+        <div class="description">
+            <p class="mission">
+                <strong>Misión:</strong> Fomentar el comercio amigable y colaborativo entre las comunidades de Ciudad Acuña, Coahuila y Del Rio, Texas, brindando una plataforma de intercambio comercial que fortalezca las economías locales y promueva el crecimiento conjunto.
+            </p>
+            <p class="vision">
+                <strong>Visión:</strong> Ser el mercado transfronterizo líder en la región, conocido por su impacto positivo en las relaciones comerciales y su capacidad para unir comunidades a través del comercio justo, respetuoso y sostenible.
+            </p>
+            <p class="construction">Estamos trabajando con entusiasmo para lanzar lo más rápido posible este sitio. ¡Gracias por tu paciencia y apoyo!</p>
+            <p>ivan__salazar@outlook.com</p>
         </div>
     </div>
-</div>
-
-    </body>
+    <div class="sponsors">
+        <h2>Patrocinadores:</h2>
+        <div class="sponsor-logos">
+            <img src="images/1049%20LOGO.png" alt="Amistad Marketplace">
+            <!-- Agrega más logos según sea necesario -->
+        </div>
+    </div>
+    <div class="secciones">
+        <h2>Futuras Secciones:</h2>
+        <div class="secciones-logos">
+            <img src="images/AmistadBotanica.png" alt="Amistad Botanica">
+            <!-- Agrega más logos según sea necesario -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

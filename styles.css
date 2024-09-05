@@ -1,211 +1,115 @@
-/* Estilos generales */
+/* Estilos básicos para la página */
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #2c3e50;
-    background-color: #f5f5f5;
-    background-image: url('images/zen-background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/* Encabezado */
-header {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #27ae60;
-}
-
-header nav ul {
-    list-style: none;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column; /* Asegura que todo esté en columna */
+    align-items: center; /* Centra los contenedores */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: #27ae60;
-}
-
-/* Hero */
-.hero {
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-    background: #27ae60;
-}
-
-.hero h2 {
-    font-size: 50px;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 28px;
-    color: lightgray;
-}
-
-/* Secciones */
-.content {
-    padding: 60px 20px;
-    background-color: white;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #27ae60;
-}
-
-.cultivos-grid, .productos-grid, .maceteros-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.cultivo-item, .producto-item, .macetero-item {
-    background-color: #ecf0f1;
-    border-radius: 8px;
+.container, .sponsors {
+    width: 90%; /* Define un ancho máximo para ambos contenedores */
+    max-width: 1200px; /* Y un ancho máximo absoluto */
+    margin: 20px 0; /* Espacio entre los contenedores */
+    background: white;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Centrado de texto */
 }
 
-.cultivo-item:hover, .producto-item:hover, .macetero-item:hover {
-    transform: translateY(-5px);
+.sponsor-logos img {
+    height: 50px; /* Altura fija para los logos */
+    margin: 0 20px; /* Espacio entre los logos */
+    vertical-align: middle;
 }
 
-.cultivo-img, .producto-img, .macetero-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Títulos y párrafos */
+h1 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
-h3 {
-    font-size: 20px;
-    color: #2c3e50;
-    margin-bottom: 10px;
+.mission, .vision {
+    margin: 10px 0;
 }
 
-p {
-    margin: 5px 0;
-    color: #7f8c8d;
-}
-
-.detalles-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.detalles-btn:hover {
-    background-color: #2ecc71;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+.construction {
+    font-size: 1.2rem;
+    color: #02518A;
     font-weight: bold;
-    cursor: pointer;
+    margin-top: 20px;
+}
+.sponsors {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 10px 0; /* Espacio alrededor del contenido */
+    text-align: center; /* Alinear texto y logos al centro */
+    border-top: 1px solid #ccc; /* Línea divisoria opcional */
 }
 
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.sponsor-logos img {
+    height: 100px; /* Altura fija para todos los logos */
+    margin: 0 10px; /* Espacio horizontal entre logos */
+    vertical-align: middle; /* Alinea verticalmente los logos con el texto */
+}
+.secciones {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    padding: 10px 0; /* Espacio alrededor del contenido */
+    text-align: center; /* Alinear texto y logos al centro */
+    border-top: 1px solid #ccc; /* Línea divisoria opcional */
 }
 
-/* Estilos para el contenido del modal */
-#modal-body img {
-    max-width: 100%; /* Asegura que la imagen se ajuste al tamaño del modal */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.secciones-logos img {
+    height: 100px; /* Altura fija para todos los logos */
+    margin: 0 10px; /* Espacio horizontal entre logos */
+    vertical-align: middle; /* Alinea verticalmente los logos con el texto */
+}
+/* Estilos generales para secciones similares */
+.container, .sponsors, .secciones {
+    width: 90%; /* Ajusta según la necesidad, pero mantiene coherencia */
+    max-width: 1200px; /* Máximo ancho para todos los contenedores */
+    margin: 20px auto; /* Margen automático para centrar y espacio entre secciones */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Texto centrado para todos los títulos y contenido */
 }
 
-/* Estilos para los párrafos y listas */
-#modal-body p {
-    margin-bottom: 1em; /* Espacio debajo de los párrafos */
-     color: darkslategray; /* Cambia este color al que prefieras */
+/* Estilos específicos para logos en secciones */
+.secciones-logos img {
+    height: 80px; /* Puedes ajustar según el tamaño deseado de los logos */
+    margin: 10px; /* Espacio alrededor de cada logo */
+    vertical-align: middle; /* Alineación vertical para mantener los logos centrados */
 }
 
-#modal-body ul {
-    padding-left: 1px; /* Espacio a la izquierda de las listas */
-    color: #000; /* Cambia este color al que prefieras */
-}
-
-#modal-body li {
-    margin-bottom: 0.5em; /* Espacio debajo de cada ítem de lista */
-    color: slategray; /* Cambia este color al que prefieras */
-}
-
-/* Manejo del desbordamiento del contenido */
-#modal-body {
-    overflow-wrap: break-word; /* Rompe palabras largas para evitar el desbordamiento */
+/* Estilo para los títulos de nuevas secciones */
+.secciones h2 {
+    color: #004aad; /* Color para el título, ajustable a tu paleta de colores */
+    margin-bottom: 15px; /* Espacio debajo del título para separar del contenido */
 }
